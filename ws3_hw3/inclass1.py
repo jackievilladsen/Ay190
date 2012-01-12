@@ -31,28 +31,48 @@ def int_simp(xmin,xmax,f,h):
     
 def xsinx(x):
     return x*sin(x)
+
+def plot_result(xmin,xmax,f,hrange,ans,plotname,filename):
+    int_h_trap = zeros(len(hrange))
+    int_h_simp = zeros(len(hrange))
+    
+    for i in range(len(hrange)):
+        int_h_trap[i] = int_trap(xmin,xmax,f,hrange[i])
+        int_h_simp[i] = int_simp(xmin,xmax,f,hrange[i])
+        
+    # what happens to the error when h -> h/2?
+    err_trap_ratio = (int_h_trap[0]-ans)/(int_h_trap[3]-ans)
+    err_simp_ratio = (int_h_simp[0]-ans)/(int_h_simp[3]-ans)
+    
+    print 'When h decreases by a factor of', hrange[0]/hrange[3]
+    
+    print 'Error decreases by a factor of', err_trap_ratio, '(trapezoid rule)'
+    print err_simp_ratio, '(Simpson\'s rule)'
+
+    plot(hrange,int_h_simp,'-b',label='Simpson\'s Rule')
+    plot(hrange,int_h_trap,'-r',label='Trapezoidal Rule')
+    plot([0,max(hrange)],[ans,ans],'-g',label='Analytic Answer')
+    axis([0,max(hrange),ans-0.05,ans+0.01])
+    title(plotname)
+    xlabel('Step size h')
+    ylabel('Result of integral')
+    legend(loc='lower right')
+    savefig(filename)
+
     
 xmin = 0
 xmax = pi
+hrange=(xmax-xmin)/arange(3,1000)
+
 f = sin
-hrange=(xmax-xmin)/arange(30,1000)
-#hrange = arange(0.003,0.1,0.003)
+ans = 2
+plotname='Integration of sin x from 0 to pi'
+filename='sinx.pdf'
+plot_result(xmin,xmax,f,hrange,ans,plotname,filename)
 
-int_h_trap = zeros(len(hrange))
-int_h_simp = zeros(len(hrange))
+f=xsinx
+ans=pi
+plotname = 'Integration of x*sin x from 0 to pi'
+filename='xsinx.pdf'
+plot_result(xmin,xmax,f,hrange,ans,plotname,filename)
 
-for i in range(len(hrange)):
-    int_h_trap[i] = int_trap(xmin,xmax,f,hrange[i])
-    int_h_simp[i] = int_simp(xmin,xmax,f,hrange[i])
-
-plot(hrange,int_h_simp,'-b.',label='Simpson\'s Rule')
-plot(hrange,int_h_trap,'-r',label='Trapezoidal Rule')
-plot([0,.1],[2,2],'-g')
-axis([0,1,1.99,2.01])
-show()
-
-ind=find(int_h_simp<2)
-plot(ind)
-show()
-
-f=
