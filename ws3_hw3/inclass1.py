@@ -75,4 +75,3 @@ ans=pi
 plotname = 'Integration of x*sin x from 0 to pi'
 filename='xsinx.pdf'
 plot_result(xmin,xmax,f,hrange,ans,plotname,filename)
-
