@@ -31,6 +31,9 @@ def int_simp(xmin,xmax,f,h):
     
 def xsinx(x):
     return x*sin(x)
+    
+def frac_err(ycalc,ytrue):
+    return abs((ycalc-ytrue)/ytrue)
 
 def plot_result(xmin,xmax,f,hrange,ans,plotname,filename):
     int_h_trap = zeros(len(hrange))
@@ -49,20 +52,23 @@ def plot_result(xmin,xmax,f,hrange,ans,plotname,filename):
     print 'Error decreases by a factor of', err_trap_ratio, '(trapezoid rule)'
     print err_simp_ratio, '(Simpson\'s rule)'
 
-    plot(hrange,int_h_simp,'-b',label='Simpson\'s Rule')
-    plot(hrange,int_h_trap,'-r',label='Trapezoidal Rule')
-    plot([0,max(hrange)],[ans,ans],'-g',label='Analytic Answer')
-    axis([0,max(hrange),ans-0.05,ans+0.01])
+    nsteps = (xmax-xmin)/hrange
+    figure
+    loglog(nsteps,frac_err(int_h_simp,ans),'-b',label='Simpson\'s Rule')
+    loglog(nsteps,frac_err(int_h_trap,ans),'-r',label='Trapezoidal Rule')
+    #plot([0,max(hrange)],[ans,ans],'-g',label='Analytic Answer')
+    #axis([0,max(hrange),ans-0.05,ans+0.01])
     title(plotname)
-    xlabel('Step size h')
-    ylabel('Result of integral')
-    legend(loc='lower right')
+    xlabel('Number of intervals')
+    ylabel('Fractional error')
+    legend(loc='upper right')
     savefig(filename)
+    show()
 
     
 xmin = 0
 xmax = pi
-hrange=(xmax-xmin)/arange(3,1000)
+hrange=(xmax-xmin)/arange(3,10000)
 
 f = sin
 ans = 2
