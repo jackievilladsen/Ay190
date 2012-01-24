@@ -1,0 +1,44 @@
+\documentclass{article}
+% option ``report'' puts title on separate page
+
+\usepackage{amsmath}
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+
+\title{WS6: Linear Systems of Equations and Stiff ODEs}
+\author{Jackie Villadsen}
+\date{\today}
+\maketitle
+
+
+\section{Solving Large Linear Systems of Equations}
+Blah de blah
+
+\begin{figure}[h]
+  \begin{center}
+     \includegraphics[width=\textwidth]{linsystimes}
+  \end{center}
+  \caption{Blah de blah.}
+  \label{fig:times}
+\end{figure}
+
+\begin{table}[p]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+i & Number of Equations & Time (s) for Gauss Elimination & Time (s) for Built-In Solver \\
+\hline
+1 & 10 & 1.4e-3 & 1.5e-4 \\
+2 & 100 & 9.4e-2 & 3.8e-4 \\
+3 & 200 & 0.38 & 1.8e-3 \\
+4 & 1000 & 11 & 1.2e-1 \\
+5 & 2000 & 54 & 0.68 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Stiff ODE Systems}
+Boom-de-yada.
+
+\end{document}

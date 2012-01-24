@@ -8,6 +8,10 @@ This temporary script file is located here:
 
 from pylab import *
 
+def myArange(xmin,xmax,dx=1):
+    nsteps = round((xmax-xmin)/dx)
+    return linspace(xmin,xmax-dx,nsteps)
+
 def f(x):
     return x**3 - 5*x**2 + x
 
@@ -29,13 +33,13 @@ def diff_cen(x,f):
     return x_cen,df_dx_cen
     
 def err_fwd(dx):
-    x=arange(-2,6,dx)
+    x=myArange(-2,6,dx)
     [x_fwd,df_dx_fwd]=diff_fwd(x,f(x))
     err_fwd = df_dx_fwd - df_dx(x_fwd)
     return x_fwd,err_fwd
     
 def err_cen(dx):
-    x=arange(-2,6,dx)
+    x=myArange(-2,6,dx)
     [x_cen,df_dx_cen]=diff_cen(x,f(x))
     err_cen = df_dx_cen - df_dx(x_cen)
     return x_cen,err_cen
