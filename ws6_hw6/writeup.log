@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011/MacPorts 2011_3) (format=pdflatex 2012.1.9)  23 JAN 2012 18:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011/MacPorts 2011_3) (format=pdflatex 2012.1.9)  31 JAN 2012 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -195,34 +195,53 @@ e
 <linsystimes.pdf, id=1, 578.16pt x 433.62pt>
 File: linsystimes.pdf Graphic file (type pdf)
  <use linsystimes.pdf>
-Package pdftex.def Info: linsystimes.pdf used on input line 20.
+Package pdftex.def Info: linsystimes.pdf used on input line 19.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
 
-Overfull \hbox (60.26466pt too wide) in paragraph at lines 28--39
- [][] 
+Overfull \hbox (7.6119pt too wide) in paragraph at lines 24--43
+\OT1/cmr/m/n/10 tion and back-substitution on-line at http://snippets.dzone.com
+/posts/show/5645,
  []
 
 [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map} <./linsystimes.pdf
->] [2] [3] (./writeup.aux) ) 
+>]
+Overfull \hbox (44.59799pt too wide) in paragraph at lines 46--58
+ [][] 
+ []
+
+<stiff.pdf, id=55, 578.16pt x 433.62pt>
+File: stiff.pdf Graphic file (type pdf)
+ <use stiff.pdf>
+Package pdftex.def Info: stiff.pdf used on input line 82.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2] [3 <./stiff.pdf>] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 2058 strings out of 494770
- 27826 string characters out of 3171574
- 84218 words of memory out of 3000000
- 5272 multiletter control sequences out of 15000+200000
+ 2064 strings out of 494770
+ 27907 string characters out of 3171574
+ 88234 words of memory out of 3000000
+ 5277 multiletter control sequences out of 15000+200000
  8408 words of font info for 31 fonts, out of 3000000 for 9000
  134 hyphenation exceptions out of 8191
  37i,7n,23p,229b,265s stack positions out of 5000i,500n,10000p,200000b,50000s
-</opt/local/share/texmf-texlive-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr17.pfb>
-Output written on writeup.pdf (3 pages, 65567 bytes).
+</opt/local/share/texmf-texlive-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></opt/local/share/texmf-texlive-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/share/texmf-texlive-dist/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb></opt/local/share/texmf-texlive-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></opt/local/share/texmf-texlive-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></opt/local/share/texmf-texlive-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-texlive-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb>
+Output written on writeup.pdf (3 pages, 121344 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

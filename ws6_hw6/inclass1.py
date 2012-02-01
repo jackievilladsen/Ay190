@@ -64,7 +64,7 @@ def gauss(a, b, t=1.0e-9, verbose=False):
 
 	return tempb
  
-############### end code from online
+############### end code from online, begin my code:
     
 def load_Ab(i):
     # loads matrix A and b for system linear equations Ax = b
